@@ -1,9 +1,26 @@
 import axios from "axios";
 
-const googleScholarAPI = {
-    getGoogleScholar: function (){
-        return axios.get("https://www.googleapis.com/auth/books");
-    }
-}
 
-export default googleScholarAPI;
+export default {
+  // Gets all books
+  getBooks: function() {
+    return axios.get("/api/books");
+  },
+  // Gets the book with the given id
+  getBook: function(id) {
+    return axios.get("/api/books/" + id);
+  },
+  // Deletes the book with the given id
+  deleteBook: function(id) {
+    return axios.delete("/api/books/" + id);
+  },
+  // Saves a book to the database
+  saveBook: function(bookData) {
+    console.log("save route")
+    return axios.post("/api/books", bookData);
+  },
+  getGoogleScholar: function (){
+    return axios.get("https://www.googleapis.com/auth/books");
+}
+};
+

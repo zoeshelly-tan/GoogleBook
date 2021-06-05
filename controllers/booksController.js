@@ -8,12 +8,15 @@ module.exports = {
       console.log(resp.data)
       res.json({result:resp.data});
     });
-
-    // db.Post.find(req.query)
-    //   .sort({ date: -1 })
-    //   .then(dbModel => res.json(dbModel))
-    //   .catch(err => res.status(422).json(err));
   },
+  findAll: function(req, res) {
+    db.Book
+      .find(req.query)
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+ 
   findById: function(req, res) {
     db.Post.findById(req.params.id)
       .then(dbModel => res.json(dbModel))
@@ -35,4 +38,5 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
+  
 };
