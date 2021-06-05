@@ -11,7 +11,7 @@
 * [License](#License)
 ## Project Links
 [Github Repo](https://github.com/zoeshelly-tan/GoogleBook)
-[Heroku link](https://techblogzoeshelly.herokuapp.com/)
+[Heroku link](https://ancient-harbor-42705.herokuapp.com/)
 
 
 ## Screenshots
@@ -30,10 +30,7 @@ The project is design to build React-based Google Books Search app.
 -      Javascript
 -      React js
 -      Mongoodb
--      css
--      Semantic react ui
--      SuperAgent
--      Mobx
+
 
 
 

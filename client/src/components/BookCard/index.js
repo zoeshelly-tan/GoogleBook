@@ -9,11 +9,11 @@ const BookCard =(props)=> {
   const [books, setBooks] = useState([])
  function handleFormSubmit(event) {
     // event.preventDefault();
-      API.saveBook({
-        title: props.title,
-        author: props.author,
-        description:props.description,
-        image:props.image,
+      API.saveBook()
+      .then((response) => {
+        const data = response.data;
+        this.setBooks({ books: data });
+        console.log('Data has been received!!');
       })
       .then(res => console.log("saved"))
       .catch(err => console.log(err));
